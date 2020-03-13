@@ -11,26 +11,22 @@
       Если строка заключена в двойные кавычки (\"), PHP распознает управляющие последовательности специальных символов.\n
       Но самым важным свойством строк в двойных кавычках является обработка переменных.\n";
 
-    //echo "$text";
     mb_regex_encoding('UTF-8');
     mb_internal_encoding("UTF-8");
 
     function my_mb_string (string $text): void {
       $words=preg_split("/[\s,.:()-]+/", $text, NULL, PREG_SPLIT_NO_EMPTY);
-      //print_r($words);
+
       $word_str=implode(",", $words);
-      //echo $word_str;
     
       foreach ($words as $word) {
         
         $count=mb_substr_count($word_str, $word);
 
-        echo $word . ":" . $count . "\n";
+        echo $word . ": " . $count . "\n";
       }
 
-       echo(count($words));
+       echo "Всего слов: " . count($words);
     }
     
     echo my_mb_string($text);
-
-   
