@@ -18,12 +18,20 @@
       $words=preg_split("/[\s,.:()-]+/", $text, NULL, PREG_SPLIT_NO_EMPTY);
 
       $word_str=implode(",", $words);
-    
+      $list = [];
       foreach ($words as $word) {
         
         $count=mb_substr_count($word_str, $word);
 
-        echo $word . ": " . $count . "\n";
+        if(!array_key_exists($word, $list)) {
+          $list[$word] = $count;
+        }
+      }
+
+      foreach ($list as $key => $item) {
+        
+        echo $key . ":" . $item . "\n";
+
       }
 
        echo "Всего слов: " . count($words);
