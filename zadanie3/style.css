@@ -1,0 +1,18 @@
+.container {
+    padding: 50px;
+}
+
+.btn {    
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 0px;
+    padding: 10px 10px 10px;
+    text-decoration: none;
+    box-shadow: 0 0 2px #9685d3;
+    text-transform: uppercase;   
+}
+
+.btn:hover {
+    box-shadow: 3px 3px 10px #9685d3;
+}

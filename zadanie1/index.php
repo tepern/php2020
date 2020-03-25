@@ -30,11 +30,11 @@
 
       foreach ($list as $key => $item) {
         
-        echo $key . ":" . $item . "\n";
+        echo $key . ":" . $item . PHP_EOL;
 
       }
 
-       echo "Всего слов: " . count($words);
+       echo "Всего слов: " . count($list);
     }
     
     echo my_mb_string($text);

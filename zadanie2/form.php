@@ -34,8 +34,8 @@ function get_my_file ($docs) {
         }
     }
 }
-if(!is_dir('uploads')) {
-    mkdir('uploads');
+if(!is_dir('uploads') && !mkdir('uploads')) {
+    echo "uploads не создана".PHP_EOL;
 };
 
 if(is_dir('uploads')) {
